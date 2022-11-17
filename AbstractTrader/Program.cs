@@ -13,8 +13,8 @@ namespace AbstractTrader
         {
             var tradeStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("VirtualTrader.trades4.txt");
 
-            //TradeProcessor tradeProcessor = new TradeProcessorVersion1();
-            TradeProcessor tradeProcessor = new TradeProcessorVersion2();
+            //ITradeProcesser tradeProcessor = new TradeProcessorVersion1();
+            ITradeProcesser tradeProcessor = new TradeProcessorVersion2();
 
             // ============= do not change anything below this line =============
             tradeProcessor.ProcessTrades(tradeStream);
